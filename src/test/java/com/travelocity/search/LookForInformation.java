@@ -1,4 +1,4 @@
-package travelocity.search;
+package com.travelocity.search;
 
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
@@ -25,12 +25,12 @@ public class LookForInformation {
         );
     }
 
-    public static Performable intoSearchForm(String searchTerm) {
-        return Task.where("{0} searches for '" + searchTerm + "'",
-                Click.on(VuelosRedondos.SEARCH_BUTTON),
-                Enter.theValue(searchTerm)
-                        .into(VuelosRedondos.SEARCH_FIELD)
-                        .thenHit(Keys.ENTER)
-        );
-    }
+   // public static Performable intoSearchForm(String searchTerm) {
+        //return Task.where("{0} searches for '" + searchTerm + "'",
+                //Click.on(VuelosRedondos.SEARCH_BUTTON),
+                //Enter.theValue(searchTerm)
+                //        .into(VuelosRedondos.SEARCH_FIELD)
+                  //      .thenHit(Keys.ENTER)
+        //);
+   // }
 }

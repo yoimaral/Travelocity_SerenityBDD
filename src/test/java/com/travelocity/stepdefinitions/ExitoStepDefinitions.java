@@ -1,4 +1,4 @@
-package travelocity.stepdefinitions;
+package com.travelocity.stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -6,9 +6,9 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import travelocity.pageobjects.NavigateTo;
-import travelocity.search.ExitoSection;
-import travelocity.search.LookForInformation;
+import com.travelocity.pageobjects.NavigateTo;
+import com.travelocity.search.ExitoSection;
+import com.travelocity.search.LookForInformation;
 
 import java.time.Duration;
 

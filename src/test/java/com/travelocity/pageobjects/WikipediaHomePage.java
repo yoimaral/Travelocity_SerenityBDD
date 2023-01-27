@@ -1,4 +1,4 @@
-package travelocity.pageobjects;
+package com.travelocity.pageobjects;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.DefaultUrl;

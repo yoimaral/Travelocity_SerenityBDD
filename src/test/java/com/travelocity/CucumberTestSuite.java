@@ -1,4 +1,4 @@
-package travelocity;
+package com.travelocity;
 
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;

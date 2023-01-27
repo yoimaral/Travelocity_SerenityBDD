@@ -1,4 +1,4 @@
-package travelocity.pageobjects;
+package com.travelocity.pageobjects;
 
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;

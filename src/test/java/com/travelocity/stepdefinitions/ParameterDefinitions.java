@@ -1,4 +1,4 @@
-package travelocity.stepdefinitions;
+package com.travelocity.stepdefinitions;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.ParameterType;

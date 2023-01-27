@@ -1,13 +1,13 @@
-package travelocity.stepdefinitions;
+package com.travelocity.stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.ensure.Ensure;
-import travelocity.pageobjects.NavigateTo;
-import travelocity.search.LookForInformation;
-import travelocity.search.WikipediaArticle;
+import com.travelocity.pageobjects.NavigateTo;
+import com.travelocity.search.LookForInformation;
+import com.travelocity.search.WikipediaArticle;
 
 public class SearchStepDefinitions {
 

@@ -1,10 +1,14 @@
-package travelocity.stepdefinitions;
+package com.travelocity.stepdefinitions;
 
+import com.travelocity.tasks.SeleccionarDestinoVuelos;
+import com.travelocity.tasks.SeleccionarOrigenVuelos;
+import com.travelocity.userinterfaces.VuelosEncontrados;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.Actor;
-import travelocity.tasks.SeleccionarOrigenVuelos;
+import net.serenitybdd.screenplay.actors.OnStage;
+import net.serenitybdd.screenplay.ensure.Ensure;
 
 public class VuelosRedondosStepDefinitions {
 
@@ -17,14 +21,13 @@ public class VuelosRedondosStepDefinitions {
 
     @Cuando("quiera viajar a {string} por {int} dias")
     public void viajeDestinoConDias(String destino, Integer cantidadDias) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                SeleccionarDestinoVuelos.destinoYDias(destino, cantidadDias));
     }
 
     @Entonces("debe obtener alguna opcion de vuelo")
     public void viajeObtenerAlgunaOpcion() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        Ensure.that(VuelosEncontrados.LIST_VUELOS_ENCONTRADOS).values().hasSizeGreaterThan(0);
     }
 
 }
