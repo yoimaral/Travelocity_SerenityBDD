@@ -1,6 +1,6 @@
-package com.travelocity.tasks;
+package com.travelocity.tasks.vuelos;
 
-import com.travelocity.userinterfaces.DetalleVuelos;
+import com.travelocity.userinterfaces.vuelos.DetalleVuelos;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
@@ -10,12 +10,12 @@ import org.openqa.selenium.Keys;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class SeleccionarDestinoVuelos implements Task {
+public class SeleccionarDestinoViajes implements Task {
 
     private String destino;
     private Integer diasViaje;
 
-    public SeleccionarDestinoVuelos(String destino, Integer diasViaje){
+    public SeleccionarDestinoViajes(String destino, Integer diasViaje){
         this.destino = destino;
         this.diasViaje = diasViaje;
     }
@@ -28,11 +28,14 @@ public class SeleccionarDestinoVuelos implements Task {
                 Enter.theValue(this.destino).into(DetalleVuelos.IN_DESTINO).thenHit(Keys.ENTER),
                 Click.on(DetalleVuelos.SELECT_DATE_REGRESO),
                 Click.on(DetalleVuelos.DATE_REGRESO),
+                Click.on(DetalleVuelos.BUTTON_LISTO),
                 Click.on(DetalleVuelos.BUT_BUSCAR)
         );
     }
 
-    public static Performable destinoYDias (String destino, Integer diasViaje){
-        return instrumented(SeleccionarDestinoVuelos.class, destino, diasViaje);
+    public static Performable destinoYDias(String destino, Integer diasViaje){
+        return instrumented(SeleccionarDestinoViajes.class, destino, diasViaje);
     }
+
+
 }

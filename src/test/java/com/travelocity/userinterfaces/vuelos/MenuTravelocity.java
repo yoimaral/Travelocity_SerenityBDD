@@ -1,4 +1,4 @@
-package com.travelocity.userinterfaces;
+package com.travelocity.userinterfaces.vuelos;
 
 import net.serenitybdd.screenplay.targets.Target;
 

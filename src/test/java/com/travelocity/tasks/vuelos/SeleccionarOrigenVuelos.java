@@ -1,13 +1,13 @@
-package com.travelocity.tasks;
+package com.travelocity.tasks.vuelos;
 
-import com.travelocity.userinterfaces.DetalleVuelos;
+import com.travelocity.userinterfaces.vuelos.DetalleVuelos;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Open;
 import com.travelocity.pageobjects.TravelocityHomePage;
-import com.travelocity.userinterfaces.MenuTravelocity;
+import com.travelocity.userinterfaces.vuelos.MenuTravelocity;
 import org.openqa.selenium.Keys;
 
 public class SeleccionarOrigenVuelos {

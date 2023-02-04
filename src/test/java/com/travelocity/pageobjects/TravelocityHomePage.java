@@ -1,7 +1,7 @@
 package com.travelocity.pageobjects;
 
+import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.DefaultUrl;
-import net.thucydides.core.pages.PageObject;
 
-@DefaultUrl("https://www.travelocity.com/es/?pwaLob=wizard-flight-pwa")
+@DefaultUrl("https://www.travelocity.com/es/")
 public class TravelocityHomePage extends PageObject {}
