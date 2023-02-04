@@ -14,7 +14,7 @@ import net.serenitybdd.screenplay.ensure.Ensure;
 
 public class VuelosRedondosStepDefinitions {
 
-    @Dado("{string} esta en {string}")
+    @Dado("{actor} esta en {string}")
     public void viajeOrigen(Actor actor, String origen) {
         actor.attemptsTo(
                 SeleccionarOrigenVuelos.para(origen)
