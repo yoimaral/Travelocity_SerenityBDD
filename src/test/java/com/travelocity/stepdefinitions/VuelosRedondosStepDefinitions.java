@@ -31,7 +31,7 @@ public class VuelosRedondosStepDefinitions {
 
     @Entonces ("debe obtener alguna opcion de vuelo")
     public void viajeObtenerAlgunaOpcion() {
-        Ensure.that(VuelosEncontrados.LIST_VUELOS_ENCONTRADOS).values().hasSizeGreaterThan(0);
+        Ensure.that(VuelosEncontrados.LIST_VUELOS_ENCONTRADOS).values().hasSizeGreaterThan(1);
     }
 
 
