@@ -10,7 +10,7 @@ Característica: Envio de paquetes con hospedaje y vuelo agregados
     Entonces La página muestra una lista de paquetes de alquiler disponibles
 
   Escenario: Paquetes con opcion de auto
-    Dado dado que estoy en Quito (UIO - A. Internacional Mariscal Sucre)
+    Dado que estoy en Quito (UIO - A. Internacional Mariscal Sucre)
     Cuando viaje quiero un paquete a Bogotá (BOG - A. Internacional El Dorado) por 28 dias con opcion de agregar un auto
     Entonces debe obtener alguna paquete con opcion de auto
 

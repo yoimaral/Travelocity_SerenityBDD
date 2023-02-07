@@ -27,3 +27,8 @@ Como usuario, quiero poder buscar y alquilar un auto en Travelocity para una fec
     Cuando ingreso mis datos personales y de pago
     Y hago clic en el botón "Reservar ahora"
     Entonces se me debe mostrar una confirmación de la reserva con un número de referencia y una fecha límite para cancelar o modificar la reserva.
+
+
+
+
+
