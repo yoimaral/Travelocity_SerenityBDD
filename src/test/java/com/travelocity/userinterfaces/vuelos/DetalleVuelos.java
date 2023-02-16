@@ -4,6 +4,8 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class DetalleVuelos {
 
+    public static final Target CLASE_DE_VUELO = Target.the("button de clase").locatedBy("//button[@id='preferred-class-input-trigger']");
+    public static final Target SELECT_CLASE = Target.the("select clase").locatedBy("//div[@role='menu']/a[2]");
     public static final Target BUT_ORIGEN = Target.the("button de origen").locatedBy("//button[@data-stid='location-field-leg1-origin-menu-trigger']");
     public static final Target IN_ORIGEN = Target.the("input de origen").locatedBy("//input[@id='location-field-leg1-origin']");
     public static final Target BUT_DESTINO = Target.the("button de destino").locatedBy("//button[@data-stid='location-field-leg1-destination-menu-trigger']");

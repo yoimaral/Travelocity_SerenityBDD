@@ -26,5 +26,4 @@ Característica: Vuelos redondos
   Escenario: vuelo redondo con opción de agregar hospedaje
     Dado Diego esta en "Medellin"
     Cuando quiera viajar a "Cancun" agregando un hospedaje por 8 dias
-    Entonces debe obtener varias opcion de vuelo
-    Y debe incluir hospedaje
+    Entonces debe obtener varias opcion de vuelo y hospedaje

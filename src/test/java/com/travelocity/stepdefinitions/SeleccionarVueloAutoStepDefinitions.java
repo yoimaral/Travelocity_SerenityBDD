@@ -18,7 +18,7 @@ public class SeleccionarVueloAutoStepDefinitions {
     @Dado("{actor} esta buscando auto en {string}")
     public void autos(Actor actor, String destino) {
         actor.attemptsTo(
-                SeleccionarOrigenAuto.para(destino));
+                SeleccionarOrigenAuto.destino(destino));
     }
 
     @Cuando("quiere rentarlo {int} dias y regresarlo a {string}")

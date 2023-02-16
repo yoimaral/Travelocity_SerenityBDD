@@ -16,7 +16,7 @@ public class SeleccionarHospedajesStepDefinitions {
     @Dado("que {actor} quiero hospedarme en el {string}")
     public void hospedaje(Actor actor,String destino) {
         actor.attemptsTo(
-                SeleccionarHospedajes.para(destino));
+                SeleccionarHospedajes.dias(destino));
     }
 
     @Cuando("quiero reservar por {int} dias")

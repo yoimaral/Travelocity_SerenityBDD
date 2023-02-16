@@ -5,6 +5,7 @@ import net.serenitybdd.screenplay.targets.Target;
 public class DetalleAutos {
 
     public static final Target BUT_ENTREGA = Target.the("button de entrega").locatedBy("//button[@data-stid='location-field-locn-menu-trigger']");
+    public static final Target BUT_SELECT_DEVOLUCION = Target.the("clien en el lugar de devolucion").locatedBy("//div[@xpath='1']/button[1]");
 
     public static final Target IN_ENTREGA = Target.the("input de entrega").locatedBy("//input[@id='location-field-locn']");
 
@@ -20,5 +21,5 @@ public class DetalleAutos {
 
     public static final Target BUT_BUSCAR = Target.the("boton buscar vuelos").locatedBy("//button[@data-testid='submit-button']");
 
-    public static final Target BUT_SELECT_ENTREGA = Target.the("seleccionar entrega").locatedBy("ul[data-stid='location-field-locn-results'] > li:nth-child(1) > button");
+    public static final Target BUT_SELECT_ENTREGA = Target.the("clien en el lugar de entrega").locatedBy("//div[@xpath='1']/button[1]");
 }

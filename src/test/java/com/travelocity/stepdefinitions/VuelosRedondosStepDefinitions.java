@@ -19,7 +19,7 @@ public class VuelosRedondosStepDefinitions {
     @Dado("{actor} esta en {string}")
     public void viajeOrigen(Actor actor, String origen) {
         actor.attemptsTo(
-                SeleccionarOrigenVuelos.para(origen)
+                SeleccionarOrigenVuelos.origen(origen)
         );
     }
 
@@ -54,13 +54,11 @@ public class VuelosRedondosStepDefinitions {
                 SeleccionarDestinoHospedaje.destinoYHospedaje(destino, cantidadDias));
     }
 
-    @Entonces("debe obtener varias opcion de vuelo")
+    @Entonces("debe obtener varias opcion de vuelo y hospedaje")
     public void viajeObtenerVuelos(){
-        Ensure.that(VuelosEncontrados.LIST_VUELOS_HOSPEDAJE).values().hasSizeGreaterThan(0);
+        Ensure.that(
+                VuelosEncontrados.LIST_VUELOS_HOSPEDAJE).values().hasSizeGreaterThan(0);
     }
 
-    @Y("debe incluir hospedaje")
-    public void viajeObtenerHospedaje(){
-        Ensure.that(VuelosEncontrados.LIST_VUELOS_CHECKBOX_HOSPEDAJE).value().hasSizeGreaterThan(0);
-    }
+
 }

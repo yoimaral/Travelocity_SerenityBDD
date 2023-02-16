@@ -1,6 +1,7 @@
 package com.travelocity.tasks.vuelos;
 
 import com.travelocity.userinterfaces.vuelos.DetalleVuelos;
+import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
@@ -10,15 +11,28 @@ import com.travelocity.pageobjects.TravelocityHomePage;
 import com.travelocity.userinterfaces.vuelos.MenuTravelocity;
 import org.openqa.selenium.Keys;
 
-public class SeleccionarOrigenVuelos {
+import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-    public static Performable para(String origenName) {
-        return Task.where("{0} abre travelocity en vuelos y selecciona origen {1}",
+public class SeleccionarOrigenVuelos implements Task {
+
+    private String origen;
+
+    public SeleccionarOrigenVuelos (String origen){
+        this.origen = origen;
+    }
+
+    @Override
+    public <T extends Actor> void performAs(T actor) {
+        actor.attemptsTo(
                 Open.browserOn().the(TravelocityHomePage.class),
                 Click.on(MenuTravelocity.A_VUELOS),
                 Click.on(DetalleVuelos.BUT_ORIGEN),
-                Enter.theValue(origenName).into(DetalleVuelos.IN_ORIGEN).thenHit(Keys.ENTER)
-                );
+                Enter.theValue(this.origen).into(DetalleVuelos.IN_ORIGEN).thenHit(Keys.ENTER)
 
+        );
+    }
+
+    public static Performable origen(String origen) {
+        return instrumented(SeleccionarOrigenVuelos.class, origen);
     }
 }

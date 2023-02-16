@@ -14,13 +14,26 @@ import org.openqa.selenium.Keys;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class SeleccionarHospedajes {
+public class SeleccionarHospedajes implements Task {
 
-    public static Performable para(String destino) {
-       return Task.where("{0} abre travelocity en hospedaje y selecciona destino {1}",
+    private String destino;
+
+    public SeleccionarHospedajes (String destino){
+        this.destino = destino;
+    }
+
+
+    @Override
+    public <T extends Actor> void performAs(T actor) {
+        actor.attemptsTo(
                 Open.browserOn().the(TravelocityHomePage.class),
                 Click.on(DetalleHospedajes.BUT_DESTINO),
                 Enter.theValue(destino).into(DetalleHospedajes.IN_DESTINO).thenHit(Keys.ENTER)
+
         );
+    }
+
+    public static Performable dias(String destino){
+        return instrumented(SeleccionarHospedajes.class, destino);
     }
 }

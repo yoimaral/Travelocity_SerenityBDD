@@ -11,7 +11,7 @@ public class HospedajesEncontrados {
             .locatedBy("//div[@data-stid='property-listing-results']");
 
     public static final Target HOTEL_AUTO = Target.the("hotel encontrado")
-            .locatedBy("//div[@data-stid='property-listing-results']");
+            .locatedBy("//div[@class='uitk-price-subtext-padded']/div[1]");
 
 
 }
